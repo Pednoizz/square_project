@@ -25,7 +25,7 @@ function get_result() {
 
     else {
         if (get_width > 330975 || get_length > 330975) 
-            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ใส่เลขเยอะหาพ่อมึงหรอ"
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ข้อมูลที่ได้ทำการ input มีค่ามากเกินไป"
         else if (!Number.isInteger(get_width) || !Number.isInteger(get_length)) 
             output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ความกว้างและความยาวต้องเป็นจำนวนเต็ม"
         else {
