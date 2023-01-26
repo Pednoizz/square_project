@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body{
+    font-family: 'Kanit', serif;
+}
+
+.tocenter {
+    padding-top: 75px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+}
+
+form{
+    position: relative;
+    text-align: center;
+}
+   
+form .output{
+    position: relative;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    width: 320px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form #submit{
+    margin-top: 25px;
+    font-family: 'Kanit', serif;
+    border: 2px solid black;
+}
+
+form #submit:hover{
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+
+form #reset{
+    margin-top: 25px;
+    font-family: 'Kanit', serif;
+    border: 2px solid red;
+    margin-left: 10px;
+}
+
+form #reset:hover{
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+
+input[type=number] {
+    width: 15%;
+}
+
+input[type=number]:hover{
+    border: 2px solid grey;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 12px;
+    border: 2px solid black;
+    position: absolute;
+    z-index: 1;
+    display: inline;
+    padding-bottom: 5px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.madeby {
+    text-align: center;
+    padding-right: 50px;
+}
