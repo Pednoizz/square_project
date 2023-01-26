@@ -7,7 +7,7 @@ body{
 }
 
 .tocenter {
-    padding-top: 75px;
+    padding-top: 30px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
@@ -48,7 +48,7 @@ form #submit:hover{
 
 form #reset{
     margin-top: 25px;
-    font-family: 'Kanit', serif;
+    font-family: 'Kanit', serif;    
     border: 2px solid red;
     margin-left: 10px;
 }
@@ -92,4 +92,13 @@ input[type=number]:hover{
 .madeby {
     text-align: center;
     padding-right: 50px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
 }
