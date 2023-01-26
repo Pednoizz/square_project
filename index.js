@@ -13,21 +13,24 @@ function get_result() {
     
     console.log(lengths.value);
     if (get_width <= 0 || get_length <= 0) {
-        if (String(width.value) === '' && String(lengths.value === ''))
-            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>กรุณากรอกความยาวด้านให้ครบถ้วน"
-            // TODO: fix if string value is empty.
+        if (String(width.value) === '' && String(lengths.value))
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>กรุณากรอกจำนวนจุดบนด้านกว้างให้ครบถ้วน"
+        else if (String(width.value) && String(lengths.value) === '')
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>กรุณากรอกจำนวนจุดบนด้านยาวให้ครบถ้วน"
+        else if (String(width.value) === '' && String(lengths.value) === '')
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>กรุณากรอกจำนวนจุดบนด้านกว้างและด้านยาวให้ครบถ้วน"
         else
-            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ความกว้างหรือความยาวต้องมีค่ามากกว่า 0"
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>จำนวนจุดบนด้านกว้างและด้านยาวต้องมีค่ามากกว่า 0"
     }
 
     else if (get_width > get_length) 
-        output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ความกว้างต้องมีค่าน้อยกว่าหรือเท่ากับความยาว"
+        output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>จำนวนจุดบนด้านกว้างต้องมีค่าน้อยกว่าหรือเท่ากับจำนวนจุดบนด้านยาว"
 
     else {
         if (get_width > 330975 || get_length > 330975) 
-            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ข้อมูลที่ได้ทำการ input มีค่ามากเกินไป"
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ข้อมูลที่ input มีค่ามากเกินไป"
         else if (!Number.isInteger(get_width) || !Number.isInteger(get_length)) 
-            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>ความกว้างและความยาวต้องเป็นจำนวนเต็ม"
+            output.innerHTML = "⚠️ เกิดข้อผิดพลาด<br>จำนวนจุดบนด้านกว้างและด้านยาวต้องเป็นจำนวนเต็ม"
         else {
             answer = (get_width * (2 * get_length - get_width) * (get_width * get_width - 1)) / 12;
             if (answer == 0) 
